@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "active": "true",
+      "id": 1,
+      "name": "Mary Smith",
+      "email": "mary.smith@example.com"
+    },
+    {
+      "active": "true",
+      "id": 2,
+      "name": "John Doe",
+      "email": "john.doe@example.com"
+    },
+    {
+      "name": "Eren Yeger",
+      "email": "eren.yeger@example.com",
+      "active": "true",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "title": "First Post",
+      "body": "Setting Up a React Admin Project",
+      "status": "Published",
+      "userId": "1",
+      "publishedDate": "2025-01-30",
+      "id": 1
+    },
+    {
+      "title": "Second Post",
+      "body": "Customizing React Admin Components",
+      "userId": "2",
+      "publishedDate": "2025-01-01",
+      "status": "Draft",
+      "id": 2
+    },
+    {
+      "title": "Third Post",
+      "body": "Adding Custom Actions",
+      "userId": "2",
+      "publishedDate": "2025-02-01",
+      "status": "Published",
+      "id": 3
+    },
+    {
+      "title": "Fourth Post",
+      "body": "Theming and Accessibility",
+      "userId": "1",
+      "publishedDate": "2025-02-01",
+      "status": "Draft",
+      "id": 4
+    },
+    {
+      "title": "Mission accomplished",
+      "body": "I have successfully finished the React admin Project!",
+      "userId": "3",
+      "status": "Published",
+      "id": 6,
+      "publishedDate": "2025-02-03"
+    }
+  ]
+}
