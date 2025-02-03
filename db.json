@@ -13,10 +13,10 @@
       "email": "john.doe@example.com"
     },
     {
-      "name": "Eren Yeger",
-      "email": "eren.yeger@example.com",
       "active": "true",
-      "id": 3
+      "id": 3,
+      "name": "Eren Yeger",
+      "email": "eren.yeger@example.com"
     }
   ],
   "posts": [
@@ -39,7 +39,7 @@
     {
       "title": "Third Post",
       "body": "Adding Custom Actions",
-      "userId": "2",
+      "userId": "3",
       "publishedDate": "2025-02-01",
       "status": "Published",
       "id": 3

@@ -1,21 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useDataProvider } from 'react-admin';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, Grid, Paper } from '@mui/material';
+import { useGetList } from 'react-admin';
 import axios from 'axios';
 import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import './bootstrap.css';
 
+const QuickStatsCard = ({ title, value }) => (
+    <Card style={{ margin: '1em' }}>
+        <CardContent>
+            <Typography variant="h6" color="textSecondary">
+                {title}
+            </Typography>
+            <Typography variant="h4">{value}</Typography>
+        </CardContent>
+    </Card>
+);
+
+
 const API_URL = 'http://localhost:5000/posts';
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
-    const [userPostCount, setUserPostCount] = useState({});
     const [postCount, setPostCount] = useState(0);
+    const [userPostCount, setUserPostCount] = useState({});
     const [totalUsers, setTotalUsers] = useState(0);
     const [totalPosts, setTotalPosts] = useState(0);
     const dataProvider = useDataProvider();
     const [draftPostCount, setDraftPostCount] = useState(0);
+    const [publishedPostCount, setPublishedPostCount] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,11 +43,18 @@ const Dashboard = () => {
             );
             setPostCount(postResponse.total);
 
+            // Count published posts
+            const publishedPosts = postResponse.data.filter(post =>
+                post.status === 'Published'
+            );
+            setPublishedPostCount(publishedPosts.length);
+
             // Count draft posts
             const draftPosts = postResponse.data.filter(post =>
                 post.status === 'Draft'
             );
             setDraftPostCount(draftPosts.length);
+            
 
             // Count posts per user
             const userCount = {};
@@ -58,29 +79,26 @@ const Dashboard = () => {
 
     // Prepare data for PieChart
     const pieData = [
-        { id: 'Published', value: postCount },
+        { id: 'Published', value: publishedPostCount },
         { id: 'Draft', value: draftPostCount },
     ];
 
     return (
         <div class="container" style={{padding: 3}}>
-            <Typography variant='h2' mt={3}>Basic statistic</Typography>
-            <div class="container">
-                <div>
-                    <Card class="main">
-                        <CardContent class="content">
-                            <h4>Total Users</h4>
-                            <p>{totalUsers}</p>
-                        </CardContent>
-                
-                        <CardContent>
-                            <h4>Total Posts</h4>
-                            <p>{totalPosts}</p>
-                        </CardContent>
-                    </Card>
-                </div>
-            </div>
-
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={4}>
+                    <QuickStatsCard title="Total Users" value={totalUsers} />
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    {/* Add more QuickStatsCard components as needed */}
+                    <QuickStatsCard title="Total Posts" value={totalPosts}/>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    {/* Another stat */}
+                    <QuickStatsCard title="Published Posts" value={publishedPostCount} />
+                </Grid>
+            </Grid>
+           
             <Typography variant='h2'>Posts per User</Typography>
             <div style={{ height: '400px' }}>
                 <ResponsiveBar

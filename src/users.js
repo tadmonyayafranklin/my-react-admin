@@ -16,7 +16,6 @@
        useDataProvider,
         Button,
        Confirm,
-       SelectField,
        SelectInput,
        useListContext
    } from 'react-admin';
@@ -75,6 +74,7 @@
                 <TextField source="id" />
                 <TextField source="name" />
                 <TextField source="email" />
+                <TextField label="Active" source="active" />
                 <EditButton />
                 <ShowButton />
             </Datagrid>
@@ -107,7 +107,7 @@
                <TextField source="id" />
                <TextField source="name" />
                <TextField source="email" />
-               <SelectField source="active" choices={ActiveChoices} />
+               <TextField source="active" />
            </SimpleShowLayout>
        </Show>
    );

@@ -20,6 +20,7 @@ import {
     DateInput
 } from 'react-admin';
 
+
 const StatusChoices = [
     { id: 'Published', name: 'Published' },
     { id: 'Draft', name: 'Draft' },
@@ -52,15 +53,8 @@ export const PostList = (props) => (
                 <TextField source="name" />
             </ReferenceField>
             <DateField source="publishedDate" />
-            {/* Inline edit & Conditional formatting for status */}
-            <TextField source="status" 
-                label="Status"
-                cellStyle={(record) => ({
-                    backgroundColor: record.status === 'Published' ? 'lightgreen' : 'lightgray',
-                    color: record.status === 'Published' ? 'green' : 'gray',
-                })}
-                choices={StatusChoices} options={{ fullWidth: true }}
-            />
+            {/* Apply custom status formatting */}
+            <TextField source="status" label="Status" />
             {/* Add buttons */}
             <EditButton />
             <ShowButton />
@@ -73,7 +67,6 @@ export const PostEdit = (props) => (
         <SimpleForm>
             <TextInput source="title" />
             <TextInput multiline source="body" />
-            <TextInput source="userId" />
             <DateInput source="publishedDate" />
             <SelectInput source="status" choices={StatusChoices} />
         </SimpleForm>
@@ -86,7 +79,6 @@ export const PostCreate = (props) => (
             <TextField source="id" />
             <TextInput source="title" />
             <TextInput source="body" />
-            <TextInput source="userId" />
             <DateInput source="publishedDate" />
             <SelectInput source="status" choices={StatusChoices} />
         </SimpleForm>
