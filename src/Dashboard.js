@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDataProvider } from 'react-admin';
-import { Card, CardContent, Typography, Grid, Paper } from '@mui/material';
-import { useGetList } from 'react-admin';
-import axios from 'axios';
+import { Card, CardContent, Typography, Grid } from '@mui/material';
 import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import './bootstrap.css';
@@ -18,12 +16,10 @@ const QuickStatsCard = ({ title, value }) => (
     </Card>
 );
 
-
-const API_URL = 'http://localhost:5000/posts';
-
 const Dashboard = () => {
     const [data, setData] = useState([]);
     const [postCount, setPostCount] = useState(0);
+    const [userCount, setUserCount] = useState(0);
     const [userPostCount, setUserPostCount] = useState({});
     const [totalUsers, setTotalUsers] = useState(0);
     const [totalPosts, setTotalPosts] = useState(0);
@@ -33,8 +29,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(API_URL);
-            const posts = response.data;
+    
 
             // Fetch posts count
             const postResponse = await dataProvider.getList(
@@ -42,6 +37,13 @@ const Dashboard = () => {
                 {pagination: {page: 1, perPage: 100}}
             );
             setPostCount(postResponse.total);
+
+            // Fetch users count
+            const userResponse = await dataProvider.getList(
+                './users', 
+                {pagination: {page: 1, perPage: 100}}
+            );
+            setUserCount(userResponse.total);
 
             // Count published posts
             const publishedPosts = postResponse.data.filter(post =>
@@ -63,9 +65,8 @@ const Dashboard = () => {
             });
             setUserPostCount(userCount);
 
-
             // Set total users and posts
-            setTotalUsers(new Set(posts.map(post => post.userId)).size);
+            setTotalUsers(new Set(postResponse.map(post => post.userId)).size);
             setTotalPosts(posts.length);
 
             setData(posts);
@@ -87,7 +88,7 @@ const Dashboard = () => {
         <div class="container" style={{padding: 3}}>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
-                    <QuickStatsCard title="Total Users" value={totalUsers} />
+                    <QuickStatsCard title="Total Users" value={userResponse.length} />
                 </Grid>
                 <Grid item xs={12} md={4}>
                     {/* Add more QuickStatsCard components as needed */}

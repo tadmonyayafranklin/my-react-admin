@@ -45,8 +45,6 @@ The goal of this project was to build a React dashbord application using React-a
 
 &#x1F389; Use React Admin's `ThemeProvider`.
 
-&#x1F389; Add a dark mode toggle to switch themes dynamically.
-
 &#x1F389; Persist the theme preference using `localStorage`.
 
 5. ### Dashboard with Custom Charts
@@ -64,9 +62,20 @@ The goal of this project was to build a React dashbord application using React-a
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## How to run the project ? &#128221;
+## Available Scripts &#128221;
 
-After cloning the project, you must execute these commands:
+Before running this project, make sure you have `Node JS` and `npm` installed on your computer.
+
+If you're using `Ubuntu` or other linux systems, type this command on your terminal to install it:
+
+`sudo apt-get install update && sudo apt install node`
+
+Then type this command to check the installation:
+
+`node -v && npm -v`
+
+After cloning the project directory, you can execute these commands:
+
 1. ### `npm install`
 
 Install all the dependencies for the project.
