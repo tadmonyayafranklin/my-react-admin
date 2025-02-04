@@ -5,7 +5,6 @@
   "dependencies": {
     "@nivo/bar": "^0.88.0",
     "@nivo/pie": "^0.88.0",
-    "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "json-server": "^0.17.4",
     "ra-data-json-server": "^5.5.2",

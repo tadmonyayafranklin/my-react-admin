@@ -61,13 +61,7 @@
     };
  
     export const UserList = (props) => (
-        <List {...props} sx={{
-                display: "flex", 
-                position: "relative",
-                WebkitBoxAlign: "center",
-                alignItems: "center",
-                minHeight: 266
-            }}
+        <List {...props} sx={4} md={6}
             style={{padding: '0 8px'}}
         >
             <Datagrid bulkActionButtons={<DeactivateUsersButton />}>

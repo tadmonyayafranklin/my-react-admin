@@ -1,8 +1,8 @@
-# Welcome on Nexus
+# Welcome on Nexus &#x1F389;
 
-The goal of this project was to build a React dashbord application using React-admin. 
+This project is a React dashbord application using React-admin that enable us to manage users and posts. 
 
-# Goals
+# Goals &#x1F3AF;
 
 1. ### Setting up a React Admin Project
 **Task:** Create a React Admin application using the React Admin framework.
@@ -54,11 +54,8 @@ The goal of this project was to build a React dashbord application using React-a
 
 &#x1F389; A pie chart showing the distribution of published vs. draft posts.
 
-&#x1F389; Use `nivo` charting library.
+&#x1F389; Use `nivo`  library to draw the different charts.
 
-&#x1F389; Fetch the required data from the API.
-
-&#x1F389; Make the charts interactive.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,30 +65,30 @@ Before running this project, make sure you have `Node JS` and `npm` installed on
 
 If you're using `Ubuntu` or other linux systems, type this command on your terminal to install it:
 
-`sudo apt-get install update && sudo apt install node`
+`sudo apt-get install update`
+
+`sudo apt install node`
 
 Then type this command to check the installation:
 
-`node -v && npm -v`
+`node -v` 
 
-After cloning the project directory, you can execute these commands:
+`npm -v`
 
-1. ### `npm install`
+After cloning the project directory, execute these commands to run the application:
 
+1. `npm install`
 Install all the dependencies for the project.
 
-2. ### `npm run server`
-
+2. `npm run server`
 Runs the server that enables our react admin application to connect to the mock API using `json-server`.
 
-3. ### `npm start`
-
+3. `npm start`
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes. You may also see any lint errors in the console.
 
-4. ### `npm run build`
-
+4. `npm run build`
 Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes. Your app is ready to be deployed!
@@ -99,25 +96,22 @@ The build is minified and the filenames include the hashes. Your app is ready to
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Login details &#x1F6E1;
+To connect to the application `before/after` logout, use the following credentials:
+- username=`admin`;
 
-username=`admin`;
-password=`password`;
+- password=`password`;
 
 ## Technologies &#x1F6E0;
 To achieve this project, we have used:
 
-&#x1F3AF; Node JS.
+- Node JS;
 
-&#x1F3AF; React.
+- React;
 
-&#x1F3AF; React Admin Framework: This project uses `React Admin Framework` for building interfaces!. It is a popular choice for developers looking to create admin panels and dashboards &#x1F4CA; efficiently.
+- React Admin (**Ra**): This project uses `React-admin ` framework for building interfaces!. It is a popular choice for developers looking to create admin panels and dashboards &#x1F4CA; efficiently.
 
-&#x1F3AF; Material-UI (**MUI**): `MUI` is a powerful tool for building modern web applications with `React`. Its adherence to Material Design Principles, along with its rich set of `components` and customization options, makes it a popular choice among developers looking to create `beautiful` and `functional` user interfaces. 
+- Material-UI (**MUI**): `MUI` is a powerful tool for building modern web applications with `React`. Its adherence to Material Design Principles, along with its rich set of `components` and customization options, makes it a popular choice among developers looking to create `beautiful` and `functional` user interfaces. 
 
 ## Contributions &#x1F91D;
 We are waiting for your contributions, improvements and your support! 
-
 This application was made with &#x2764; by **TADMON-YAYA Franklin Lenny**.
-
-
-

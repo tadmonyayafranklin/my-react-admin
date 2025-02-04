@@ -17,9 +17,13 @@ import {
     Filter,
     SelectInput,
     Pagination,
-    DateInput
+    DateInput,
+    SelectField
 } from 'react-admin';
 
+const userChoices = [
+    {id: 'name', name: 'name'},
+];
 
 const StatusChoices = [
     { id: 'Published', name: 'Published' },
@@ -34,16 +38,12 @@ const PostFilter = (props) => (
     </Filter>
 );
 
+
+
 export const PostList = (props) => (
     <List {...props} filters={<PostFilter />} pagination={<Pagination/>} sort={
-        { field: 'id', order: 'DESC'}}
-        sx={{
-            display: "flex", 
-            position: "relative",
-            WebkitBoxAlign: "center",
-            alignItems: "center",
-            minHeight: 266
-        }}
+        { field: 'id', order: 'ASC'}}
+        sx={4} md={4}
         style={{padding: '0 8px'}}
     >
         <Datagrid>
@@ -77,6 +77,7 @@ export const PostCreate = (props) => (
     <Create {...props}>
         <SimpleForm>
             <TextField source="id" />
+            <ReferenceInput label="Author" source="userId" reference="users" />
             <TextInput source="title" />
             <TextInput source="body" />
             <DateInput source="publishedDate" />

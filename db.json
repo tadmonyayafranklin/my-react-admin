@@ -17,6 +17,18 @@
       "id": 3,
       "name": "Eren Yeger",
       "email": "eren.yeger@example.com"
+    },
+    {
+      "name": "Choi Chio",
+      "email": "choi.chio@example.com",
+      "active": "false",
+      "id": 4
+    },
+    {
+      "name": "Iuri LLiagami",
+      "email": "iuri.lliagami@example.com",
+      "active": "false",
+      "id": 5
     }
   ],
   "posts": [
@@ -59,6 +71,38 @@
       "status": "Published",
       "id": 6,
       "publishedDate": "2025-02-03"
+    },
+    {
+      "userId": 3,
+      "title": "Be patient",
+      "body": "The app will be loaded very soon!",
+      "publishedDate": "2025-02-01",
+      "status": "Draft",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "title": "What do you want?",
+      "body": "I'm the founder of Choi Food!",
+      "publishedDate": "2025-01-28",
+      "status": "Published",
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "title": "I'm not a coder",
+      "body": "Infact, I'm a king of fighter character",
+      "publishedDate": "2025-02-03",
+      "status": "Published",
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "title": "It's time to sleep",
+      "body": "I have been working since the morning, so good night!",
+      "publishedDate": "2025-02-03",
+      "status": "Published",
+      "id": 10
     }
   ]
 }
