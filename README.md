@@ -102,7 +102,7 @@ To connect to the application `before/after` logout, use the following credentia
 - password=`password`;
 
 ## Technologies &#x1F6E0;
-To achieve this project, we have used:
+To achieve this project, I have used:
 
 - Node JS;
 
