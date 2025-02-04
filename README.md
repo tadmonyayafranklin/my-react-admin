@@ -59,7 +59,9 @@ This project is a React dashbord application using React-admin that enable us to
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts &#128221;
+## How to run the project ? &#128221;
+
+1. ### Prerequisites
 
 Before running this project, make sure you have `Node JS` and `npm` installed on your computer.
 
@@ -75,23 +77,15 @@ Then type this command to check the installation:
 
 `npm -v`
 
-After cloning the project directory, execute these commands to run the application:
+2. ### Run the project
 
-1. `npm install`
-Install all the dependencies for the project.
+- First start cloning the project using `git clone https://github.com/tadmonyayafranklin/my-react-admin.git`
 
-2. `npm run server`
-Runs the server that enables our react admin application to connect to the mock API using `json-server`.
-
-3. `npm start`
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes. You may also see any lint errors in the console.
-
-4. `npm run build`
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes. Your app is ready to be deployed!
+- Then run the project using by executing these commands:
+   - `npm install`: Install all the dependencies for the project.
+   - `npm run server`:Runs the server that enables our react admin application to connect to the mock API using `json-server`.
+   - `npm start`: Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes. You may also see any lint errors in the console.
+   - `npm run build`: Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
