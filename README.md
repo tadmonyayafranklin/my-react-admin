@@ -7,54 +7,54 @@ This project is a React dashbord application using React-admin that enable us to
 1. ### Setting up a React Admin Project
 **Task:** Create a React Admin application using the React Admin framework.
 
-&#x1F389; Set up a project with mock data using `json-server`.
+&#x2705; Set up a project with mock data using `json-server`.
 
-&#x1F389; Configure the application to connect to the mock API.
+&#x2705; Configure the application to connect to the mock API.
 
-&#x1F389; Configure authentication using React Admin's `authProvider`.
+&#x2705; Configure authentication using React Admin's `authProvider`.
 
 2. ### Customizing React Admin Components
 **Task:** Customize the default `List view` for posts.
 
-&#x1F389; Display a table with the following columns: `Title`, `Author (User)`, `Published Date`, and `Status`.
+&#x2705; Display a table with the following columns: `Title`, `Author (User)`, `Published Date`, and `Status`.
 
-&#x1F389; Add filters for `Author` and `Status`.
+&#x2705; Add filters for `Author` and `Status`.
 
-&#x1F389; Add pagination and sorting functionality.
+&#x2705; Add pagination and sorting functionality.
 
 
 3. ### Adding Custom Actions
 **Task:** Add a bulk action to the users resource.
 
-&#x1F389; Create a bulk action button to deactivate selected users.
+&#x2705; Create a bulk action button to deactivate selected users.
 
-&#x1F389; Use `BulkActionButton` for the functionality.
+&#x2705; Use `BulkActionButton` for the functionality.
 
-&#x1F389; Show a confirmation dialog before performing the action.
+&#x2705; Show a confirmation dialog before performing the action.
 
-&#x1F389; Implement API calls with `dataProvider`.
+&#x2705; Implement API calls with `dataProvider`.
 
-&#x1F389; Add success and error notifications.
+&#x2705; Add success and error notifications.
 
 4. ### Theming and Accessibility
 **Task:** Customize the default theme of the React Admin application.
 
-&#x1F389; Change the primary and secondary colors.
+&#x2705; Change the primary and secondary colors.
 
-&#x1F389; Adjust the typography for headings and body text.
+&#x2705; Adjust the typography for headings and body text.
 
-&#x1F389; Use React Admin's `ThemeProvider`.
+&#x2705; Use React Admin's `ThemeProvider`.
 
-&#x1F389; Persist the theme preference using `localStorage`.
+&#x2705; Persist the theme preference using `localStorage`.
 
 5. ### Dashboard with Custom Charts
 **Task:** Build a dashboard that displays the following:
 
-&#x1F389; A bar chart showing the number of posts per user.
+&#x2705; A bar chart showing the number of posts per user.
 
-&#x1F389; A pie chart showing the distribution of published vs. draft posts.
+&#x2705; A pie chart showing the distribution of published vs. draft posts.
 
-&#x1F389; Use `nivo`  library to draw the different charts.
+&#x2705; Use `nivo`  library to draw the different charts.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
